@@ -184,10 +184,18 @@ const APTGroupPage: React.FC<Props> = ({ groupId }) => {
                 <th>Associated Groups</th>
                 <td>{selectedGroup.associated_groups}</td>
               </tr>
-              <tr>
-                <th>Aliases</th>
-                <td>{selectedGroup.aliases}</td>
-              </tr>
+              {selectedGroup.aliases && (
+                <tr>
+                  <th>Aliases</th>
+                  <td>
+                    <table>
+                      <tbody>
+                        {renderTactics(selectedGroup.aliases)}
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              )}
               <tr>
                 <th>Location</th>
                 <td>{selectedGroup.location}</td>
@@ -196,10 +204,18 @@ const APTGroupPage: React.FC<Props> = ({ groupId }) => {
                 <th>Sponsor</th>
                 <td>{selectedGroup.sponsor}</td>
               </tr>
-              <tr>
-                <th>Motivation</th>
-                <td>{selectedGroup.motivation}</td>
-              </tr>
+              {selectedGroup.motivation && (
+                <tr>
+                  <th>Motivation</th>
+                  <td>
+                    <table>
+                      <tbody>
+                        {renderTactics(selectedGroup.motivation)}
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              )}
               <tr>
                 <th>Description</th>
                 <td>{selectedGroup.description}</td>
