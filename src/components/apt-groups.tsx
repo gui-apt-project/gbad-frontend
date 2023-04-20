@@ -60,6 +60,18 @@ const APTGroupPage: React.FC<Props> = ({ groupId }) => {
     );
   };
   
+  function renderArrayToLine(inputArray: string[]) {
+    if (inputArray && inputArray.length > 0) {
+      return (
+        <tr>
+          <td>{inputArray.join(", ")}</td>
+        </tr>
+      );
+    } else {
+      return null;
+    }
+  }
+
   function renderArray(inputArray: string[]) {
     return inputArray.map((inputItem) => (
       <tr key={inputItem}>
@@ -197,7 +209,7 @@ const APTGroupPage: React.FC<Props> = ({ groupId }) => {
                   <td>
                     <table>
                       <tbody>
-                        {renderArray(selectedGroup.aliases)}
+                        {renderArrayToLine(selectedGroup.aliases)}
                       </tbody>
                     </table>
                   </td>
