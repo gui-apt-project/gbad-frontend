@@ -64,7 +64,7 @@ export default interface Group {
   associated_groups: string;
   aliases: string[];
   sponsor: string;
-  motivation: string;
+  motivation: string[];
   description: string;
   tactics: Tactic[];
   techniques: Technique[];
