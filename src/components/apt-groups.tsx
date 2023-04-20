@@ -60,6 +60,13 @@ const APTGroupPage: React.FC<Props> = ({ groupId }) => {
     );
   };
   
+  function renderArray(inputArray: string[]) {
+    return inputArray.map((inputItem) => (
+      <tr key={inputItem}>
+        <td>{inputItem}</td>
+      </tr>
+    ));
+  }
 
   const renderTactics = (tactics: Tactic[]) => {
     return (
@@ -190,7 +197,7 @@ const APTGroupPage: React.FC<Props> = ({ groupId }) => {
                   <td>
                     <table>
                       <tbody>
-                        {renderTactics(selectedGroup.aliases)}
+                        {renderArray(selectedGroup.aliases)}
                       </tbody>
                     </table>
                   </td>
@@ -210,7 +217,7 @@ const APTGroupPage: React.FC<Props> = ({ groupId }) => {
                   <td>
                     <table>
                       <tbody>
-                        {renderTactics(selectedGroup.motivation)}
+                        {renderArray(selectedGroup.motivation)}
                       </tbody>
                     </table>
                   </td>
