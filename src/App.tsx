@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import APTGroupPage from './components/apt-groups';
-import SearchPage from './components/target-search';
+import APTGroupPage from './pages/apt-groups';
+import SearchPage from './pages/target-search';
 import './App.css';
 
 const App: React.FC = () => {

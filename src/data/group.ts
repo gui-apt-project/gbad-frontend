@@ -55,11 +55,28 @@ export interface Tactic {
   type: string;
 }
 
-export default interface Group {
+export interface GroupList {
+  id: number;
+  name: string;
+}
+
+export interface Group {
   id: number;
   name: string;
   mitre_id: string;
-  location: number;
+  location: string;
+  associated_groups: string;
+  aliases: string[];
+  sponsor: string;
+  motivation: string[];
+  description: string;
+}
+
+export interface GroupExtended {
+  id: number;
+  name: string;
+  mitre_id: string;
+  location: string;
   targets: Target;
   associated_groups: string;
   aliases: string[];
