@@ -73,7 +73,6 @@ const APTGroupPage: React.FC = () => {
       <h1>Search APT Groups</h1>
       <form onSubmit={handleSearch}>
         <div className="input-group">
-          <label htmlFor="group">Group:</label>
           <select id="group" value={groupId} onChange={handleChange}>
             <option value="">Select an APT Group</option>
             {groups.map((group) => (
