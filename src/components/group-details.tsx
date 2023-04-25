@@ -55,7 +55,7 @@ const GroupDetails: React.FC<GroupDetailsProps> = ({ group }) => {
               <ul>
                 {techniques.map((technique) => (
                   <li key={technique.technique_id}>
-                    <strong>{technique.technique_id}:</strong> {technique.procedure}
+                    <strong>{technique.technique_id}:</strong> {technique.technique_name}
                   </li>
                 ))}
               </ul>
